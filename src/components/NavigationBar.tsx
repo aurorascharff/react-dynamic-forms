@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { pathNames } from '../Routes';
+import Button from '@mui/material/Button';
 
 export default function NavigationBar() {
   const navigate = useNavigate();
@@ -11,15 +12,16 @@ export default function NavigationBar() {
         <div>
           {Object.entries(pathNames)?.map(([key, value], index) => {
             return (
-              <button
+              <Button
                 key={index}
                 onClick={() => {
                   navigate(value);
                 }}
                 className={'btn btn--primary capitalize'}
+                variant="contained"
               >
                 {key}
-              </button>
+              </Button>
             );
           })}
         </div>

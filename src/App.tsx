@@ -1,11 +1,14 @@
 import './App.css';
-import Counter from './Counter';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './Routes';
+import NavigationBar from './components/NavigationBar';
 
 function App() {
   return (
-    <div>
-      <Counter />
-    </div>
+    <BrowserRouter>
+      <NavigationBar />
+      <Routes />
+    </BrowserRouter>
   );
 }
 export default App;

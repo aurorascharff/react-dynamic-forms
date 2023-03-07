@@ -1,9 +1,9 @@
 import { Box, Button, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
-import { DynamicFieldData } from '../models/dynamic-control-types';
-import DynamicField from './DynamicField';
 import useFetchFormFields from '../hooks/useFetchFormFields';
+import DynamicField from './DynamicField';
+import type { DynamicFieldData } from '../models/dynamic-control-types';
 
 export default function FormSubmission() {
   const formMethods = useForm();

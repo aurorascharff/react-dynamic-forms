@@ -1,4 +1,5 @@
-import { TypeOf, z } from 'zod';
+import { z } from 'zod';
+import type { TypeOf } from 'zod';
 
 export const formSchema = z.object({
   firstName: z.string().min(2, 'first name must be at least 2 characters long').max(20, 'too long bro'),

@@ -1,4 +1,4 @@
-.eslintrc.js
+.eslintrc.cjs
 tsconfig.json
 vite.config.ts
 prettier.config.js

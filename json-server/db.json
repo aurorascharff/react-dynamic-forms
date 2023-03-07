@@ -1,9 +1,18 @@
 {
   "fields": [
     {
-      "fieldName": "name",
+      "fieldName": "firstName",
       "inputType": "text",
-      "label": "Name",
+      "label": "First Name",
+      "defaultValue": "",
+      "config": {
+        "required": "Required"
+      }
+    },
+    {
+      "fieldName": "lastName",
+      "inputType": "text",
+      "label": "Last Name",
       "defaultValue": "",
       "config": {
         "required": "Required"

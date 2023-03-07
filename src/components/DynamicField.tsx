@@ -1,6 +1,6 @@
-import { useFormContext, UseFormRegisterReturn } from 'react-hook-form';
 import { MenuItem, Select, TextField } from '@mui/material';
-import { DynamicFieldData } from '../models/dynamic-control-types';
+import { useFormContext } from 'react-hook-form';
+import type { DynamicFieldData } from '../models/dynamic-control-types';
 
 type Props = {
   field: DynamicFieldData;
@@ -23,11 +23,13 @@ const DynamicField = ({ field, errors }: Props) => {
           error={!!errors[fieldName]}
           {...register(fieldName, config)}
         >
-          {options.map((o, index) => (
-            <MenuItem key={index} value={o.value}>
-              {o.label}
-            </MenuItem>
-          ))}
+          {options.map((o, index) => {
+            return (
+              <MenuItem key={index} value={o.value}>
+                {o.label}
+              </MenuItem>
+            );
+          })}
         </Select>
       );
     }

@@ -1,7 +1,7 @@
+import Button from '@mui/material/Button';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { pathNames } from '../Routes';
-import Button from '@mui/material/Button';
 
 export default function NavigationBar() {
   const navigate = useNavigate();

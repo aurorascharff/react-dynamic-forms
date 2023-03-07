@@ -1,6 +1,7 @@
-import { ElementType, lazy, Suspense } from 'react';
-import type { RouteObject } from 'react-router';
+import { lazy, Suspense } from 'react';
 import { useRoutes } from 'react-router';
+import type { ElementType } from 'react';
+import type { RouteObject } from 'react-router';
 
 const Loadable = (Component: ElementType) => {
   const LazyComponents = (props: any) => {

@@ -1,56 +1,44 @@
 {
-  "templates": [
+  "fields": [
     {
-      "name": "Contact Form",
-      "description": "A simple contact form",
-      "fields": [
-        {
-          "fieldName": "name",
-          "label": "Name",
-          "fieldType": "text",
-          "required": true
-        },
-        {
-          "fieldName": "email",
-          "label": "Email",
-          "fieldType": "email",
-          "required": true
-        },
-        {
-          "fieldName": "phone",
-          "label": "Phone",
-          "fieldType": "phone",
-          "required": true
-        },
-        {
-          "fieldName": "submit",
-          "label": "Submit",
-          "fieldType": "submit"
-        }
-      ]
+      "fieldName": "name",
+      "inputType": "text",
+      "label": "Name",
+      "defaultValue": "",
+      "config": {
+        "required": "Required"
+      }
     },
     {
-      "name": "Product Form",
-      "description": "A simple product form",
-      "fields": [
+      "fieldName": "age",
+      "inputType": "number",
+      "label": "Age",
+      "defaultValue": 18,
+      "config": {
+        "required": "Required"
+      }
+    },
+    {
+      "fieldName": "language",
+      "inputType": "select",
+      "label": "Language",
+      "options": [
         {
-          "fieldName": "name",
-          "label": "Name",
-          "fieldType": "text",
-          "required": true
+          "value": "english",
+          "label": "English"
         },
         {
-          "fieldName": "price",
-          "label": "Price",
-          "fieldType": "number",
-          "required": true
-        },
-        {
-          "fieldName": "submit",
-          "label": "Submit",
-          "fieldType": "submit"
+          "value": "french",
+          "label": "French"
         }
-      ]
+      ],
+      "defaultValue": "english"
+    },
+    {
+      "fieldName": "address",
+      "inputType": "text",
+      "label": "Address",
+      "defaultValue": ""
     }
   ]
 }

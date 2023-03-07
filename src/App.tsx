@@ -4,6 +4,9 @@ import Routes from './Routes';
 import { deepPurple } from '@mui/material/colors';
 import NavigationBar from './components/NavigationBar';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+export const queryClient = new QueryClient();
 
 const theme = createTheme({
   palette: {
@@ -15,12 +18,14 @@ const theme = createTheme({
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <NavigationBar />
-        <Routes />
-      </BrowserRouter>
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <NavigationBar />
+          <Routes />
+        </BrowserRouter>
+      </ThemeProvider>
+    </QueryClientProvider>
   );
 }
 export default App;

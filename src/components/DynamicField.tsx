@@ -1,0 +1,50 @@
+import { useFormContext, UseFormRegisterReturn } from 'react-hook-form';
+import { MenuItem, Select, TextField } from '@mui/material';
+import { DynamicFieldData } from '../models/dynamic-control-types';
+
+type Props = {
+  field: DynamicFieldData;
+  errors: any;
+};
+
+const DynamicField = ({ field, errors }: Props) => {
+  const { register } = useFormContext();
+  const { label, inputType, fieldName, defaultValue, options = [], config } = field;
+
+  switch (inputType) {
+    case 'select': {
+      return (
+        <Select
+          sx={{ mb: 2 }}
+          label={label}
+          fullWidth
+          defaultValue={defaultValue}
+          type={inputType}
+          error={!!errors[fieldName]}
+          {...register(fieldName, config)}
+        >
+          {options.map((o, index) => (
+            <MenuItem key={index} value={o.value}>
+              {o.label}
+            </MenuItem>
+          ))}
+        </Select>
+      );
+    }
+    default:
+      return (
+        <TextField
+          sx={{ mb: 2 }}
+          label={label}
+          fullWidth
+          defaultValue={defaultValue}
+          type={inputType}
+          error={!!errors[fieldName]}
+          helperText={errors[fieldName] ? errors[fieldName].message : ''}
+          {...register(fieldName, config)}
+        />
+      );
+  }
+};
+
+export default DynamicField;

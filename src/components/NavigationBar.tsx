@@ -8,23 +8,19 @@ export default function NavigationBar() {
 
   return (
     <>
-      <div className={'mih-50 flex flex-row flex-wrap items-center justify-between'}>
-        <div>
-          {Object.entries(pathNames)?.map(([key, value], index) => {
-            return (
-              <Button
-                key={index}
-                onClick={() => {
-                  navigate(value);
-                }}
-                className={'btn btn--primary capitalize'}
-                variant="contained"
-              >
-                {key}
-              </Button>
-            );
-          })}
-        </div>
+      <div>
+        {Object.entries(pathNames)?.map(([key, value], index) => {
+          return (
+            <Button
+              key={index}
+              onClick={() => {
+                navigate(value);
+              }}
+            >
+              {key}
+            </Button>
+          );
+        })}
       </div>
     </>
   );

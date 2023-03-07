@@ -20,14 +20,25 @@ const HomePage = Loadable(
   }),
 );
 
+const FormPage = Loadable(
+  lazy(() => {
+    return import('./pages/FormPage');
+  }),
+);
+
 export const pathNames = {
   home: '/',
+  form: '/form',
 } as const;
 
 const lazyRoutes: RouteObject[] = [
   {
     path: '*',
     element: <HomePage />,
+  },
+  {
+    path: pathNames.form,
+    element: <FormPage />,
   },
 ];
 

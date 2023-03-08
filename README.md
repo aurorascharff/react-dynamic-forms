@@ -1,4 +1,4 @@
-## React Websocket and Hook forms
+## React Dynamic Forms
 
 Dynamic form rendering based on JSON schema with React Query, React Hook Forms and Material UI
 

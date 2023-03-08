@@ -1,4 +1,4 @@
-import { MenuItem, Select, TextField } from '@mui/material';
+import { FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material';
 import { useFormContext } from 'react-hook-form';
 import type { DynamicFieldData } from '../models/dynamic-control-types';
 
@@ -14,23 +14,26 @@ const DynamicField = ({ field, errors }: Props) => {
   switch (inputType) {
     case 'select': {
       return (
-        <Select
-          sx={{ mb: 2 }}
-          label={label}
-          fullWidth
-          defaultValue={defaultValue}
-          type={inputType}
-          error={!!errors[fieldName]}
-          {...register(fieldName, config)}
-        >
-          {options.map((o, index) => {
-            return (
-              <MenuItem key={index} value={o.value}>
-                {o.label}
-              </MenuItem>
-            );
-          })}
-        </Select>
+        <FormControl fullWidth>
+          <InputLabel id={fieldName}>{label}</InputLabel>
+
+          <Select
+            sx={{ mb: 2 }}
+            label={label}
+            defaultValue={defaultValue}
+            type={inputType}
+            error={!!errors[fieldName]}
+            {...register(fieldName, config)}
+          >
+            {options.map((o, index) => {
+              return (
+                <MenuItem key={index} value={o.value}>
+                  {o.label}
+                </MenuItem>
+              );
+            })}
+          </Select>
+        </FormControl>
       );
     }
     default:

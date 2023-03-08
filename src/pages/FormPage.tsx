@@ -7,8 +7,8 @@ export default function FormPage() {
   return (
     <div className="page-container">
       <Box>
-        <FormSubmission />
         <AddCustomFieldButton />
+        <FormSubmission />
       </Box>
     </div>
   );

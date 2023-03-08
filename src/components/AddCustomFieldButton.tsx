@@ -1,5 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Box, Button, MenuItem, Select, TextField, Typography } from '@mui/material';
+import { Box, Button, FormControl, InputLabel, MenuItem, Select, TextField, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import useAddCustomFormField from '../hooks/useAddCustomField';
@@ -43,28 +43,36 @@ export default function AddCustomFieldButton() {
   return (
     <Box
       sx={{
-        mt: '2rem',
+        mb: '2rem',
       }}
     >
       <Typography variant="h6" component="h2" sx={{ mb: '1rem' }}>
-        Custom field
+        Add custom field
       </Typography>
       <form onSubmit={handleSubmit(onSubmitHandler)}>
-        <Select
-          sx={{ mr: 2 }}
-          label="Field type"
-          id="fieldType"
-          {...register('fieldType', { required: true })}
-          defaultValue={options[0].value}
+        <FormControl
+          sx={{
+            minWidth: '7rem',
+          }}
         >
-          {options.map((o, index) => {
-            return (
-              <MenuItem key={index} value={o.value}>
-                {o.label}
-              </MenuItem>
-            );
-          })}
-        </Select>
+          <InputLabel id="fieldType">Field type</InputLabel>
+          <Select
+            sx={{ mr: 2 }}
+            label="Field type"
+            id="fieldType"
+            labelId="fieldType"
+            {...register('fieldType', { required: true })}
+            defaultValue={options[0].value}
+          >
+            {options.map((o, index) => {
+              return (
+                <MenuItem key={index} value={o.value}>
+                  {o.label}
+                </MenuItem>
+              );
+            })}
+          </Select>
+        </FormControl>
         <TextField label="Field name" id="fieldName" {...register('fieldName', { required: true })} sx={{ mr: 2 }} />
         <Button type="submit" disabled={!isValid} variant={'outlined'}>
           Add

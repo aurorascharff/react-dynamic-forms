@@ -33,7 +33,7 @@ export default function FormSubmission() {
       ) : (
         <Box sx={{ maxWidth: '30rem' }}>
           <Typography variant="h5" component="h1" sx={{ mb: '2rem' }}>
-            Register
+            Dynamic form
           </Typography>
           <form autoComplete="off" onSubmit={handleSubmit(onSubmitHandler)}>
             <FormProvider {...formMethods}>

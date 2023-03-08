@@ -10,7 +10,7 @@ export default function HomePage() {
           Home
         </Typography>
         <Typography variant="h6" component="h2" sx={{ mb: '2rem' }}>
-          Dynamic form rendering based on JSON schema with Material UI and React Hook Forms
+          Dynamic form rendering based on JSON schema with React Query, React Hook Forms and Material UI
         </Typography>
         <Link
           color="inherit"

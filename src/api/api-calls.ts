@@ -6,5 +6,8 @@ export async function getFormFields() {
 }
 
 export async function addCustomFormField(field: DynamicFieldData) {
-  return await axios.post<DynamicFieldData[]>('/api/fields', field);
+  return await axios.post<DynamicFieldData[]>(
+    'https://my-json-server.typicode.com/aurorawalberg/json-server/fields',
+    field,
+  );
 }

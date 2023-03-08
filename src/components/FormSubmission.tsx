@@ -12,7 +12,6 @@ export default function FormSubmission() {
     formState: { isValid, errors, isSubmitSuccessful },
     reset,
     handleSubmit,
-    watch,
   } = formMethods;
 
   const { status, data: fields } = useFetchFormFields();
@@ -49,7 +48,6 @@ export default function FormSubmission() {
               Reset
             </Button>
           </form>
-          <div>({JSON.stringify(watch())})</div>
         </Box>
       )}
     </div>

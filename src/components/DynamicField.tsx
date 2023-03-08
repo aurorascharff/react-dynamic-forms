@@ -16,7 +16,6 @@ const DynamicField = ({ field, errors }: Props) => {
       return (
         <FormControl fullWidth>
           <InputLabel id={fieldName}>{label}</InputLabel>
-
           <Select
             sx={{ mb: 2 }}
             label={label}

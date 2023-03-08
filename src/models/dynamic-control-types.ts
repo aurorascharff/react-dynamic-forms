@@ -8,6 +8,7 @@ export interface SelectOption {
 }
 
 export interface DynamicFieldData {
+  id: string;
   label: string;
   inputType: ControlType;
   fieldName: string;

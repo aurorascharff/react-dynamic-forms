@@ -41,7 +41,7 @@ export default function FormSubmission() {
                 return <DynamicField key={index} errors={errors} field={field} />;
               })}
             </FormProvider>
-            <Button type="submit" disabled={!isValid}>
+            <Button sx={{ mr: '1rem' }} type="submit" disabled={!isValid}>
               Submit
             </Button>
             <Button type="reset" variant={'outlined'}>

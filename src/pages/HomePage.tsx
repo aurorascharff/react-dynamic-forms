@@ -12,14 +12,25 @@ export default function HomePage() {
         <Typography variant="h6" component="h2" sx={{ mb: '2rem' }}>
           Dynamic form rendering based on JSON schema with React Query, React Hook Forms and Material UI
         </Typography>
-        <Link
-          color="inherit"
-          href="
+        <Box>
+          <Link
+            color="inherit"
+            href="
           https://github.com/aurorawalberg/react-dynamic-forms
-"
-        >
-          https://github.com/aurorawalberg/react-dynamic-forms
-        </Link>
+          "
+          >
+            GitHub repo
+          </Link>
+          <br />
+          <Link
+            color="inherit"
+            href="
+          https://my-json-server.typicode.com/aurorawalberg/json-server
+          "
+          >
+            Json server
+          </Link>
+        </Box>
       </Box>
     </div>
   );

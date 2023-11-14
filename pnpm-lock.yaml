@@ -33,8 +33,8 @@ dependencies:
     specifier: ^5.11.11
     version: 5.11.11(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)
   axios:
-    specifier: ^1.3.4
-    version: 1.3.4
+    specifier: ^1.6.0
+    version: 1.6.0
   concurrently:
     specifier: ^7.6.0
     version: 7.6.0
@@ -2559,8 +2559,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /axios@1.3.4:
-    resolution: {integrity: sha512-toYm+Bsyl6VC5wSkfkbbNB6ROv7KY93PEBBL6xyDczaIHasAiv4wPqQ/c4RjoQzipxRD2W5g21cOqQulZ7rHwQ==}
+  /axios@1.6.0:
+    resolution: {integrity: sha512-EZ1DYihju9pwVB+jg67ogm+Tmqc6JmhamRN6I4Zt8DfZu5lbcQGw3ozH9lFejSJgs/ibaef3A9PMXPLeefFGJg==}
     dependencies:
       follow-redirects: 1.15.2
       form-data: 4.0.0
